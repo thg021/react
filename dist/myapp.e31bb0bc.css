@@ -1,0 +1,118 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins&display=swap");
+body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  background-color: #29292b;
+  font-family: "Poppins", sans-serif;
+}
+
+input {
+  font-family: "Poppins", sans-serif;
+}
+
+.app-bar {
+  background-color: #49deb2;
+  padding: 15px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+.app-bar span {
+  flex: 1;
+}
+.app-bar__btn {
+  background-color: transparent;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+}
+.app-bar__btn:focus {
+  outline: none;
+}
+.app-bar__btn:hover {
+  color: #1e2a78;
+}
+.app-bar__btn--rotation {
+  animation: rotation 2s infinite linear;
+}
+
+.new-note {
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+  color: #1e2a78;
+  background-color: #49deb2;
+  position: fixed;
+  top: 55px;
+  left: 0;
+  right: 0;
+}
+.new-note label {
+  font-size: 14px;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+.new-note__input {
+  padding: 8px;
+  border: none;
+  border-radius: 5px;
+}
+.new-note__input:focus {
+  outline: none;
+}
+
+.note-list {
+  margin: 120px 0;
+  color: #fff;
+  padding: 15px;
+}
+.note-list .note {
+  display: flex;
+  align-items: center;
+  padding: 10px 12px;
+}
+.note-list .note__text {
+  flex: 1;
+}
+.note-list .note__input {
+  flex: 1;
+  border: 0;
+  border-bottom: 1px solid #9a9a9a;
+  background: transparent;
+  color: #fff;
+  padding: 10px 0;
+}
+.note-list .note__input:focus {
+  outline: none;
+}
+.note-list .note__button {
+  background-color: transparent;
+  border: 0;
+  color: #fff;
+  cursor: pointer;
+}
+.note-list .note__button--hidden {
+  visibility: hidden;
+}
+.note-list .note__button--red {
+  color: #e91e63;
+}
+.note-list .note__button--green {
+  color: #49deb2;
+}
+
+@-webkit-keyframes rotation {
+  from {
+    -webkit-transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(359deg);
+  }
+}
+
+/*# sourceMappingURL=/myapp.e31bb0bc.css.map */

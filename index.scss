@@ -1,0 +1,141 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins&display=swap");
+
+$bg-primary: #49deb2;
+$color-pr: #1e2a78;
+$font: "Poppins",
+sans-serif;
+$app-padding: 15px;
+
+
+body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  background-color: #29292b;
+  font-family: $font;
+}
+
+input {
+  font-family: $font;
+}
+
+.app-bar {
+  background-color: $bg-primary;
+  padding: $app-padding;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+
+  & span {
+    flex: 1
+  }
+
+  &__btn {
+    background-color: transparent;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+
+    &:focus {
+      outline: none
+    }
+
+    &:hover {
+      color: $color-pr;
+    }
+
+    &--rotation {
+      animation: rotation 2s infinite linear;
+    }
+  }
+}
+
+.new-note {
+  display: flex;
+  flex-direction: column;
+  padding: $app-padding;
+  color: $color-pr;
+  background-color: $bg-primary;
+  position: fixed;
+  top: 55px;
+  left: 0;
+  right: 0;
+
+  & label {
+    font-size: 14px;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+
+  &__input {
+    padding: 8px;
+    border: none;
+    border-radius: 5px;
+
+    &:focus {
+      outline: none;
+    }
+  }
+}
+
+.note-list {
+  margin: 120px 0;
+  color: #fff;
+  padding: 15px;
+
+  & .note {
+    display: flex;
+    align-items: center;
+    padding: 10px 12px;
+
+    &__text {
+      flex: 1;
+    }
+
+    &__input {
+      flex: 1;
+      border: 0;
+      border-bottom: 1px solid #9a9a9a;
+      background: transparent;
+      color: #fff;
+      padding: 10px 0;
+
+      &:focus {
+        outline: none;
+      }
+    }
+
+    &__button {
+      background-color: transparent;
+      border: 0;
+      color: #fff;
+      cursor: pointer;
+
+      &--hidden {
+        visibility: hidden;
+      }
+
+      &--red {
+        color: #e91e63;
+      }
+
+      &--green {
+        color: #49deb2;
+      }
+    }
+  }
+}
+
+@-webkit-keyframes rotation {
+  from {
+    -webkit-transform: rotate(0deg);
+  }
+
+  to {
+    -webkit-transform: rotate(359deg);
+  }
+}
